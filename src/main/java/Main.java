@@ -16,7 +16,7 @@ public class Main {
         Log5 log5 = new Log5(ln);
         Log10 log10 = new Log10(ln);
         LogarithmicExpression logarithmicExpression = new LogarithmicExpression(ln, log3, log5, log10);
-
+/*
         double [] arr = {
                 0.1,
                 0.2,
@@ -44,7 +44,7 @@ public class Main {
             //double res =  log10.compute(arr[i], 0.001);
             System.out.println(arr[i] + ", " + res);
         }
-
+*/
 /*
         double[][] arr = {
                 // {1, 1},
@@ -75,5 +75,30 @@ public class Main {
             System.out.println(arr[i][0] + ", " + arr[i][1] + ", " + res);
         }
          */
+        double[][] arr = {
+                {0.0, 1.0},
+                {-1.0, 6.0},
+                {-1.0, 4.0},
+                {-1.0, 3.0},
+                {-1.0, 2.0},
+                {-2.0, 3.0},
+                {-3.0, 4.0},
+                {-5.0, 6.0},
+                {-1.0, 1.0},
+                {-7.0, 6.0},
+                {-5.0, 4.0},
+                {-4.0, 3.0},
+                {-3.0, 2.0},
+                {-5.0, 3.0},
+                {-7.0, 4.0},
+                {-11.0, 6.0},
+              //  {1.0, 1.0}
+        };
+
+        for(int i = 0; i < arr.length; i++){
+            double res = trigonometricExpression.calculate(arr[i][0]*Math.PI/arr[i][1], 0.001);
+            //double res =  cos.compute(arr[i][0]*Math.PI/arr[i][1], 0.001);
+            System.out.println(arr[i][0]*Math.PI/arr[i][1] + ", " + res);
+        }
     }
 }

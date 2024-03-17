@@ -32,9 +32,9 @@ public class LogIntegrationTest {
             List<String[]> lines = csvReader.readAll();
             for (String[] line : lines) {
                 final double x = Double.parseDouble(line[0]);
-                final double y = Double.parseDouble(line[1]);
+                final double res = Double.parseDouble(line[1]);
 
-                Mockito.when(lf.compute(x, 0.001)).thenReturn(y);
+                Mockito.when(lf.compute(x, 0.001)).thenReturn(res);
             }
         } catch (IOException e) {
             System.out.println("io");
