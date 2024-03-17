@@ -1,5 +1,7 @@
-package functions.logarithms;
+package functions.logarithms.separateLogUnit;
 
+import functions.logarithms.Ln;
+import functions.logarithms.Log3;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

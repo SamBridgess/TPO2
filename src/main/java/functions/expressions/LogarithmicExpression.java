@@ -1,6 +1,9 @@
-package functions.logarithms;
+package functions.expressions;
 
-import functions.Expression;
+import functions.logarithms.Ln;
+import functions.logarithms.Log10;
+import functions.logarithms.Log3;
+import functions.logarithms.Log5;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

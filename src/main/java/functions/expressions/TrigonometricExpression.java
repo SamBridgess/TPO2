@@ -1,6 +1,6 @@
-package functions.trigonometry;
+package functions.expressions;
 
-import functions.Expression;
+import functions.trigonometry.*;
 import lombok.AllArgsConstructor;
 
 @AllArgsConstructor

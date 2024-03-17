@@ -1,7 +1,4 @@
-package functions;
-
-import functions.logarithms.LogarithmicExpression;
-import functions.trigonometry.TrigonometricExpression;
+package functions.expressions;
 
 public class FunctionSystem {
     private final LogarithmicExpression logCalculator;

@@ -2,6 +2,7 @@ package functions.logarithms;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import functions.expressions.LogarithmicExpression;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;

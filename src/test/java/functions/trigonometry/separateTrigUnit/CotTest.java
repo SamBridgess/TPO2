@@ -1,5 +1,8 @@
-package functions.trigonometry;
+package functions.trigonometry.separateTrigUnit;
 
+import functions.trigonometry.Cos;
+import functions.trigonometry.Cot;
+import functions.trigonometry.Sin;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 

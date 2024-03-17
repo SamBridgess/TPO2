@@ -1,3 +1,5 @@
+import functions.expressions.LogarithmicExpression;
+import functions.expressions.TrigonometricExpression;
 import functions.logarithms.*;
 import functions.trigonometry.*;
 

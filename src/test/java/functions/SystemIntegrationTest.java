@@ -2,6 +2,9 @@ package functions;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+import functions.expressions.FunctionSystem;
+import functions.expressions.LogarithmicExpression;
+import functions.expressions.TrigonometricExpression;
 import functions.logarithms.*;
 import functions.trigonometry.*;
 import org.junit.jupiter.api.BeforeAll;

@@ -1,39 +1,41 @@
-package functions.logarithms;
+package functions.logarithms.separateLogUnit;
 
+import functions.logarithms.Ln;
+import functions.logarithms.Log5;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class LnTest {
-    private static Ln ln;
+class Log5Test {
+    private static Log5 log5;
 
     @BeforeAll
     public static void init() {
-        ln = new Ln();
+        log5 = new Log5(new Ln());
     }
 
     @Test
     void testZeroLn() {
-        assertEquals(0, ln.compute(1, 0.001));
+        assertEquals(0, log5.compute(1, 0.001));
     }
 
     @Test
     void testInvalidX() {
         assertThrows(ArithmeticException.class, () -> {
-            ln.compute(-1, 0.001);
+            log5.compute(-1, 0.001);
         });
 
         assertThrows(ArithmeticException.class, () -> {
-            ln.compute(Double.NaN, 0.001);
+            log5.compute(Double.NaN, 0.001);
         });
     }
 
     @Test
     void testNormalX() {
         assertAll(
-                () -> assertEquals(2.302585, ln.compute(10, 0.001), 0.01),
-                () -> assertEquals(2.70805, ln.compute(15, 0.001), 0.01)
+                () -> assertEquals(1.4306, log5.compute(10, 0.001), 0.01),
+                () -> assertEquals(1.6826, log5.compute(15, 0.001), 0.01)
         );
     }
 
