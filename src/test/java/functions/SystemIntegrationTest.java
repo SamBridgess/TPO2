@@ -24,7 +24,7 @@ import static org.mockito.Mockito.when;
 public class SystemIntegrationTest {
     private TrigonometricExpression trigonometricExpression = Mockito.mock(TrigonometricExpression.class);
     private LogarithmicExpression logarithmicExpression = Mockito.mock(LogarithmicExpression.class);
-
+    private CsvOutput csvOutput = new CsvOutput();
     @BeforeAll
     public void fillAll(){
         fillMock(trigonometricExpression, "src/test/resources/inputTrig/trigFuncData.csv");
@@ -65,8 +65,10 @@ public class SystemIntegrationTest {
     }
 
     private void runTest(FunctionSystem functionSystem, Double x, Double trueResult){
+        csvOutput.setFilePath("src/test/resources/result/FuncSystem.csv");
         try {
             double result = functionSystem.calculate(x, 0.001);
+            csvOutput.logger(x, result);
             assertEquals(trueResult, result, 0.001);
         } catch (ArithmeticException e) {
             assertEquals("Wrong x", e.getMessage());
